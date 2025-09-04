@@ -14,6 +14,7 @@
 }
 
 body {
+  margin: 0;
   font-family: "League Gothic", sans-serif, Arial, sans-serif;
   width: 100%;
   background-image: url('../img/FUNDO.png');
@@ -23,6 +24,19 @@ body {
   color: var(--cor-texto);
   position: relative;
   background-color: var(--cor-fundo);
+}
+
+
+.container2 {
+  position: relative;
+  background-color: #000; /* fundo preto */
+  width: 80%;            /* ajusta largura do fundo preto */
+  max-width: 1000px;   /* máximo para não ficar gigante em telas grandes */
+  padding: 40px;
+  color: #fff;
+  box-sizing: border-box;
+  border-radius: 8px;    /* opcional */
+  left: 170px;
 }
 
 /* Barra de navegação */
@@ -131,13 +145,14 @@ body {
   position: fixed;
   top: 0;
   left: -250px; /* começa fora da tela */
-  width: 250px;
+
+  width: 255px;
   height: 100%;
-  background: black;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.8);
+  background: rgb(0, 0, 0);
+  /* box-shadow: 2px 0 8px rgba(255, 7, 7, 0.8); */
   padding: 20px;
   transition: left 0.3s ease;
-  z-index: 1100;
+  /* z-index: 1100; */
   font-size: 20px;
   letter-spacing: 0.5px;
 }
@@ -146,6 +161,7 @@ body {
 
 .menu-lateral ul {
   background-color: #000000;
+  width: 235px;
   list-style: none;
   margin-top: 40px;
 
@@ -162,11 +178,13 @@ body {
 .menu-lateral a {
   text-decoration: none;
   color: #fff;
-  font-weight: 700;
+  /* font-weight: 700; */
   font-size: 16px;
-  display: block;
-  /* background-color: #000000; */
-  padding: 10px 0;
+  display: flex;
+  margin: 0;
+  width: 235px;
+  background-color: #000000;
+  padding:  0;
   border-bottom: 1px solid transparent;
   transition: border-bottom-color 0.3s ease;
   font-size: 30px;
@@ -175,13 +193,16 @@ body {
 }
 
 .menu-lateral a:hover {
-  /* border-bottom-color:#b20710 ;
-  color:#b20710; */
+  left: 0;
+  border-bottom-color:#000000 ;
+  color:#ff0000; /* Cor letra quando o mouse passa por cima*/
 }
 
 .menu-lateral.ativo {
-  left: 0;
-  background-color: #000000;
+  left: -18px;
+
+  /* background-color: #000000;
+  color:#000000; */
 }
 
 /* Botão fechar menu */
@@ -202,7 +223,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -218,20 +239,36 @@ body {
   max-width: 600px;
   margin-bottom: 20px;
   letter-spacing: 0.05em;
-  font-weight: 700;
+  font-weight: 100;
   text-transform: uppercase;
 }
+.titulo2{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    height: 100;
+}
+.Topo{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  top: -110px;
 
+}
 .titulo2 h2 {
-  
+  white-space: nowrap;
   /* text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8); */
+  /* align-items: center;
+  justify-content: center; */
   padding-bottom: 10px;
   padding-left: 360px;
   font-family: "League Gothic", sans-serif;
   font-size: 4vw;
   font-weight: 700;
   margin-bottom: 15px;
-  text-transform: uppercase;
+
   letter-spacing: 0.1em;
 }
 
@@ -245,7 +282,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   text-align: justify;
-  margin-top: 15px;
+  margin-top: -45px;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 }
 
