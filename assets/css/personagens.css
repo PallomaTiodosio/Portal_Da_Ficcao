@@ -1,0 +1,324 @@
+:root {
+  --cor-fundo: #AF6F4C;
+  --cor-texto: #fff;
+  --cor-principal:#592D25;
+}
+
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif;background-image: url('../img/Fundo.png');width:100%; position: relative;}
+
+
+/* Barra de navegação */
+.barraNavegacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 1rem;
+  /* background-color: rgba(255, 255, 255, 0.55); */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e5e7eb;
+  background: linear-gradient( to bottom, 
+   rgba(#AE8067,0.7), 
+   rgba(#200D09,0.5)
+  );  height: 11vh;
+  /* efeito vidro */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.bgImagem{
+  background-image: url('../img/dart.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;    
+}
+
+.bgImagem .titulo {
+    display:flex;
+    align-items:center ;
+    height: 60vh;
+    justify-content: left;
+    color: #fff;
+    font-size: 30px;
+    top: -10px;
+}
+
+/* Botão pesquisar */
+.botao-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.botao-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--cor-texto);
+  border-radius: 2px;
+}
+.formulario-pesquisa {
+  display: flex;
+  align-items: center;
+  transition: width 0.3s ease;
+  /* width: 40px;  */
+   color:#fff;
+}
+.formulario-pesquisa input {
+  border: 1px solid #ccc;
+  padding: .4rem .8rem;
+  border-radius: 20px;
+  outline: none;
+  width: 0; /* escondido */
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.3s ease;
+   color:#fff;
+}
+
+.formulario-pesquisa.ativo input {
+  width: 100%;
+  opacity: 1;
+  color:#fff;
+}
+.icone-lupa {
+  position: absolute;
+  right: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #FFF;
+}
+
+
+/* Botão login */
+.botao-login {
+  background-color:#FF0707;
+  color: white;
+  padding: .4rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background .2s;
+}
+.botao-login:hover {
+  background: #FF0707;
+}
+
+/* Menu lateral */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: -250px; /* começa fora da tela */
+  width: 250px;
+  height: 100%;
+  background: #f9fafb;
+  box-shadow: 2px 0 8px rgba(0,0,0,.2);
+  padding: 1rem;
+  transition: left .3s ease;
+}
+.menu-lateral ul { list-style: none; margin-top: 2rem; }
+.menu-lateral li { margin: 1rem 0; }
+.menu-lateral a {
+  text-decoration: none;
+  color: var(--cor-texto);
+  font-weight: bold;
+}
+.menu-lateral a:hover { color: var(--cor-principal); }
+.menu-lateral.ativo { left: 0; }
+
+/* Botão fechar */
+.fechar-menu {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  float: right;
+}
+.titulo h1 {
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 6px 0 0 #ff0000; /* sombra sólida só na direita */
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0;
+}
+.principais {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+}
+.atores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 40px;
+  padding-bottom: 40px;
+  padding-left: 0;
+  margin: 10px auto;
+  border: 6px solid #33BAE6;
+}
+.atores img {
+    width: 250px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    filter: brightness(0.7);
+    margin: 0 auto;
+    display: block;
+      margin: 0 auto;
+  display: block;
+}
+.atores.oculto {
+  display: none;
+}
+.carrossel-controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+.carrossel-seta {
+  background: #33BAE6;
+  color: #fff;
+  border: none;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carrossel-seta:hover {
+  background: #FF0000;
+}
+.atores:hover{
+    border: 6px solid #FF0000;
+    transition: 0.5s;
+}
+.atores img{
+    width: 300px;
+    height: 350px;
+    padding: 10px;
+}
+.atores .icone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 100px;
+    margin-left: 0;
+    margin-bottom: 10px;  
+}
+#iconevermelho{
+    width: 200px;
+    height: 200px;
+}
+.atores h1,h4{
+    color:white;
+}
+.autor .luccas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  gap: 100px;
+}
+.luccas-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  color: #fff;
+  gap: 10px;
+}
+.luccas-texto h1 {
+  align-self: center;
+  width: 100%;
+  text-align: center;
+}
+.luccas-texto h5 {
+  text-align: justify;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 15px;
+}
+
+
+
+footer {
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e5e7eb;
+  background-color: linear-gradient(to bottom,rgba(#5C5C5C,0.7), rgba(#1A1A1A,0.7));
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  top: 40vh;
+  position: relative;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+
+.footer-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+  padding: 2px;
+}
+
+.footer-links a:hover {
+  color: #e50914; /* Vermelho destaque */
+}
+
+
+
+.footer-social a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #e50914;
+}
+
+.footer-social {
+  margin-bottom: 20px; /* espaço abaixo das redes sociais */
+}
+
+.footer-copy {
+  font-size: 13px;
+  margin: 10px 0 20px 0; /* espaço em cima e embaixo */
+  color: #aaa;
+}
+
+.footer-links {
+  margin-top: 10px; /* espaço acima dos links */
+}
