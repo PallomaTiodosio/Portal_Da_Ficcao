@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/personagens.css">
+    <title>Portal da Ficção</title>
+</head>
+<body>
+       <div class="bgImagem">
+    <!--Barra de navegação-->
+    <header class="barraNavegacao">
+
+        <!--Menu Lateral-->
+        <button class="botao-menu" id="abrirMenu" aria-label="Abrir Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!--Campo de Pesquisa-->
+       <form class="formulario-pesquisa" id="formPesquisa">
+          <!-- Lupa -->
+          <i class="fa-solid fa-magnifying-glass"></i>
+  
+          <!-- Palavra "Pesquisar" do lado da lupa -->
+          <label class="texto-pesquisar">Pesquisar</label>
+  
+          <!-- Input de texto, começa escondido -->
+          <input type="text" id="entradaPesquisa" placeholder="Digite sua pesquisa...">
+
+          <!-- Botão login -->
+        <a href="login.html" class="botao-login">Login</a>
+        </form>
+         <!-- Menu lateral escondido -->
+    <nav class="menu-lateral" id="menuLateral">
+      <button class="fechar-menu" id="fecharMenu">✖</button>
+       <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sequencia.html">Sequência Star Wars</a></li>
+        <li><a href="personagens.html">Personagens</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+    </header>
+  </div>
+  <div class="titulo">
+      <h1>Elenco Principal</h1>
+    </div>
+  <section class="principais" id="carrossel-personagens">
+    <div class="atores">
+      <div class="icone">
+        <img src="./assets/img/sabre.png" class="icone">
+      </div>
+      <img src="./assets/img/luke.jpg" class="personagem">
+      <h1>LUKE SKYWALKER</h1>
+      <h4>Mark Richard Hamill</h4>
+    </div>
+    <div class="atores">
+      <div class="icone">
+        <img src="./assets/img/coroa.png" class="icone">
+      </div>
+      <img src="./assets/img/leia.jpg" class="personagem">
+      <h1>Princesa Leia Organa</h1>
+      <h4>Carrie Frances Fisher</h4>
+    </div>
+    <div class="atores">
+      <div class="icone">
+        <img src="./assets/img/arma.png" class="icone">
+      </div>
+      <img src="./assets/img/han.jpg" class="personagem">
+      <h1>Han Solo</h1>
+      <h4>Harrison Ford</h4>
+    </div>
+    <div class="atores">
+      <div class="icone">
+        <img src="./assets/img/sabre_vermelho.png" id="iconevermelho" class="icone">
+      </div>
+      <img src="./assets/img/anakin.jpg" class="personagem">
+      <h1>ANAKIN SKYWALKER</h1>
+      <h4>Hayden Christensen</h4>
+    </div>
+    <div class="atores">
+      <div class="icone">
+        <img src="./assets/img/sabre.png" class="icone">
+      </div>
+      <img src="./assets/img/obi.jpg" class="personagem">
+      <h1>OBI-WAN KENOBI</h1>
+      <h4>Ewan McGregor</h4>
+    </div>
+    <div class="atores">
+      <div class="icone">
+        <img src="./assets/img/coroa.png" class="icone">
+      </div>
+      <img src="./assets/img/padme.jpg" class="personagem">
+      <h1>PADMÉ AMIDALA</h1>
+      <h4>Natalie Portman</h4>
+    </div>
+    <div class="atores">
+      <div class="icone">
+        <img src="./assets/img/sabre.png" class="icone">
+      </div>
+      <img src="./assets/img/ray.png" class="personagem">
+      <h1>RAY</h1>
+      <h4>Daisy Ridley</h4>
+    </div>
+    <div class="atores">
+      <div class="icone">
+        <img src="./assets/img/sabre_vermelho.png" id="iconevermelho">
+      </div>
+      <img src="./assets/img/kylo.jpg" class="personagem">
+      <h1>KYLO REN</h1>
+      <h4>Adam Driver</h4>
+    </div>
+    <div class="atores">
+      <div class="icone">
+        <img src="./assets/img/arma.png" class="icone">
+      </div>
+      <img src="./assets/img/finn.jpg" class="personagem">
+      <h1>FINN</h1>
+      <h4>John Boyega</h4>
+    </div>
+  </section>
+<div class="carrossel-controles">
+  <button id="carrossel-anterior" class="carrossel-seta">&#8592;</button>
+  <button id="carrossel-proximo" class="carrossel-seta">&#8594;</button>
+</div>
+  <section class="autor">
+    <div class="luccas">
+      <img src="./assets/img/autor.png">
+      <div class="luccas-texto">
+      <div class="titulo">
+        <h1>Autor</h1>
+      </div>
+      <h5>George Lucas (1944) é um cineasta, roteirista e produtor norte-americano, criador de Star Wars e co-criador de Indiana Jones. Começou com THX 1138, ganhou destaque com American Graffiti e revolucionou o cinema em 1977 com Star Wars. Fundou a Lucasfilm, a Industrial Light & Magic (ILM) e a Skywalker Sound, empresas que mudaram a tecnologia dos efeitos especiais. Em 2012, vendeu a Lucasfilm para a Disney por 4 bilhões de dólares. É considerado um dos maiores inovadores da história do cinema.</h5>
+      </div>
+    </div>
+  </section>
+  <footer>
+  <div class="footer-container">
+    <!-- Redes sociais primeiro -->
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-envelope"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <!-- Copyright no meio -->
+    <p class="footer-copy">
+      ©Copyright2025 - Todos os direitos autorais reservados
+    </p>
+
+    <!-- Links por último -->
+    <div class="footer-links">
+      <a href="#">Termos de Uso</a>
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Contatos</a>
+      <a href="#">Suporte</a>
+      <a href="#">Ajuda</a>
+      <a href="#">Parceria</a>
+    </div>
+  </div>
+</footer>
+<script src="./assets/js/personagens.js"></script>
+</body>
+</html>
