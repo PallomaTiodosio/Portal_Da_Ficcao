@@ -1,120 +1,104 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal da Ficção</title>
-    <link rel="stylesheet" href="assets/css/estilo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
-</head>
-<body>
-   <div class="bgImagem">
-    <!--Barra de navegação-->
-    <header class="barraNavegacao">
+<!DOCTYPE html> <html lang="pt-br">
+   <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Portal da Ficção</title> 
+    <link rel="stylesheet" href="assets/css/estilo.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet"> 
+  </head>
+   <body> 
+    <div class="bgImagem"> 
+      <!--Barra de navegação--> 
+      <header class="barraNavegacao">
+    <!--Menu Lateral-->
+    <button class="botao-menu" id="abrirMenu" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-        <!--Menu Lateral-->
-        <button class="botao-menu" id="abrirMenu" aria-label="Abrir Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+    <!--Campo de Pesquisa-->
+   <form class="formulario-pesquisa" id="formPesquisa">
+      <!-- Lupa -->
+      <i class="fa-solid fa-magnifying-glass"></i>
 
-        <!--Campo de Pesquisa-->
-       <form class="formulario-pesquisa" id="formPesquisa">
-          <!-- Lupa -->
-          <i class="fa-solid fa-magnifying-glass"></i>
-  
-          <!-- Palavra "Pesquisar" do lado da lupa -->
-          <label class="texto-pesquisar">Pesquisar</label>
-  
-          <!-- Input de texto, começa escondido -->
-          <input type="text" id="entradaPesquisa" placeholder="Digite sua pesquisa...">
+      <!-- Palavra "Pesquisar" do lado da lupa -->
+      <label class="texto-pesquisar">Pesquisar</label>
 
-          <!-- Botão login -->
-        <a href="login.html" class="botao-login">Login</a>
-        </form>
-         <!-- Menu lateral escondido -->
-    <nav class="menu-lateral" id="menuLateral">
-      <button class="fechar-menu" id="fecharMenu">✖</button>
-       <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sequencia.html">Sequência Star Wars</a></li>
-        <li><a href="personagens.html">Personagens</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
-    </header>
-    <div class="titulo">
-      <h2>MAY THE FORCE <br/>BE WITH YOU</h2>
-    </div>
-    <div class="titulo2">
-      <h2>O QUE É FICÇÃO CIENTÍFICA?</h2>
-    </div>
-  </div>
-   <div class="secao1">
-        <div class="Paragrafo"><p >Ficção científica é um gênero literário e artístico que cria histórias baseadas em avanços
-            científicos, tecnológicos ou futuros imaginados, explorando seus <br/> impactos na sociedade e no ser humano. Além disso, provoca reflexões sobre ética, progresso e os limites da
-            imaginação humana. Ela pega conceitos reais, <br/> como avanços tecnológicos, espaço, tempo ou genética, e os leva além,imaginando como seria o mundo se certas descobertas ou invenções fossem possíveis.
-          </p>
-       </div>
-    </div>  
+      <!-- Input de texto, começa escondido -->
+      <input type="text" id="entradaPesquisa" placeholder="Digite sua pesquisa...">
 
-       <div class="secao2">
-        <div class="Parte2"><h2>CARACTERÍSTICAS DA FICÇÃO CIENTÍFICA</h2>
-       </div>
-       
-    </div>   
-
-    <div class="container">
-  <div class="card">
-    <img src="./assets/img/NaveEspacial.jpeg" alt="Imagem 1">
-    <p>VIAGENS <br/>ESPACIAIS</p>
-  </div>
-  <div class="card">
-    <img src="./assets/img/R2D2.jpeg" alt="Imagem 2">
-    <p>ROBÔS</p>
-  </div>
-  <div class="card">
-    <img src="./assets/img/Tecnologia.jpeg" alt="Imagem 3">
-    <p>TECNOLOGIAS <br/>AVANÇADAS</p>
-  </div>
+      <!-- Botão login -->
+    <a href="login.html" class="botao-login">Login</a>
+    </form>
+     <!-- Menu lateral escondido -->
+<nav class="menu-lateral" id="menuLateral">
+  <button class="fechar-menu" id="fecharMenu">✖</button>
+   <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="sequencia.html">Sequência Star Wars</a></li>
+    <li><a href="personagens.html">Personagens</a></li>
+    <li><a href="#">Contato</a></li>
+  </ul>
+</nav>
+</header>
+<div class="titulo">
+  <h2>MAY THE FORCE <br/>BE WITH YOU</h2>
 </div>
-   <div class="botao">
-     <a href="quiz.html" class="botao-quiz">QUANTO VOCÊ SABE SOBRE STAR WARS?</a>
-   </div>  
+</div> 
+<div class="secao1"> 
+  <div class="titulo2">
+  <h2>O QUE É FICÇÃO CIENTÍFICA?</h2>
+</div>
+  <div class="Paragrafo"><p >Ficção científica é um gênero literário e 
+  artístico que cria histórias baseadas em avanços científicos, tecnológicos ou futuros imaginados,
+  explorando seus <br/> impactos na sociedade e no ser humano. Além disso, provoca reflexões sobre 
+  ética, progresso e os limites da imaginação humana. Ela pega conceitos reais, <br/> como avanços 
+  tecnológicos, espaço, tempo ou genética, e os leva além,imaginando como seria o mundo se certas 
+  descobertas ou invenções fossem possíveis. </p> 
+</div> 
+</div>
+   <div class="secao2">
+    <div class="Parte2"><h2>CARACTERÍSTICAS DA FICÇÃO CIENTÍFICA</h2>
+   </div>
+   
+</div>   
 
-   <footer>
-  <div class="footer-container">
-    <!-- Redes sociais primeiro -->
-    <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-envelope"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-      <a href="#"><i class="fab fa-tiktok"></i></a>
-    </div>
+<div class="container">
+<div class="card"> 
+  <img src="./assets/img/NAVE.png" alt="Imagem 1"> 
+  <p>VIAGENS <br/>ESPACIAIS</p> </div> <div class="card"> 
+    <img src="./assets/img/R2-D2.png" alt="Imagem 2"> 
+    <p>ROBÔS</p> </div> <div class="card"> 
+      <img src="./assets/img/BOLA.png" alt="Imagem 3"> 
+      <p>TECNOLOGIAS <br/>AVANÇADAS</p> </div> </div> <div class="botao"> 
+        <a href="quiz.html" class="botao-quiz">QUANTO VOCÊ SABE SOBRE STAR WARS?</a> 
+      </div> 
+      <footer> 
+        <div class="footer-container"> 
+          <!-- Redes sociais primeiro --> 
+           <div class="footer-social"> 
+            <a href="#"><i class="fab fa-facebook"></i></a> 
+            <a href="#"><i class="fab fa-instagram"></i></a> 
+            <a href="#"><i class="fab fa-envelope"></i></a> 
+            <a href="#"><i class="fab fa-youtube"></i></a> 
+            <a href="#"><i class="fab fa-tiktok"></i></a> 
+          </div>
+<!-- Copyright no meio -->
+<p class="footer-copy">
+  ©COPYRIGHT2025 - Todos os direitos autorais reservados
+</p>
 
-    <!-- Copyright no meio -->
-    <p class="footer-copy">
-      ©Copyright2025 - Todos os direitos autorais reservados
-    </p>
-
-    <!-- Links por último -->
-    <div class="footer-links">
-      <a href="#">Termos de Uso</a>
-      <a href="#">Política de Privacidade</a>
-      <a href="#">Contatos</a>
-      <a href="#">Suporte</a>
-      <a href="#">Ajuda</a>
-      <a href="#">Parceria</a>
-    </div>
-  </div>
-</footer>
- <script src="assets/js/script.js"></script>
-</body>
+<!-- Links por último -->
+<div class="footer-links">
+  <a href="#">Termos de Uso</a>
+  <a href="#">Política de Privacidade</a>
+  <a href="#">Contatos</a>
+  <a href="#">Suporte</a>
+  <a href="#">Ajuda</a>
+  <a href="#">Parceria</a>
+</div>
+</div> </footer> <script src="assets/js/script.js"></script> 
+</body> 
 </html>
-
-
-
-
