@@ -5,45 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/personagens.css">
     <title>Portal da Ficção</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet"> 
 </head>
 <body>
-       <div class="bgImagem">
-    <!--Barra de navegação-->
-    <header class="barraNavegacao">
+<header class="barraNavegacao">
+    <!--Menu Lateral-->
+    <button class="botao-menu" id="abrirMenu" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-        <!--Menu Lateral-->
-        <button class="botao-menu" id="abrirMenu" aria-label="Abrir Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+    <!--Campo de Pesquisa-->
+   <form class="formulario-pesquisa" id="formPesquisa">
+      <!-- Lupa -->
+      <i class="fa-solid fa-magnifying-glass"></i>
 
-        <!--Campo de Pesquisa-->
-       <form class="formulario-pesquisa" id="formPesquisa">
-          <!-- Lupa -->
-          <i class="fa-solid fa-magnifying-glass"></i>
-  
-          <!-- Palavra "Pesquisar" do lado da lupa -->
-          <label class="texto-pesquisar">Pesquisar</label>
-  
-          <!-- Input de texto, começa escondido -->
-          <input type="text" id="entradaPesquisa" placeholder="Digite sua pesquisa...">
+      <!-- Palavra "Pesquisar" do lado da lupa -->
+      <label class="texto-pesquisar">Pesquisar</label>
 
-          <!-- Botão login -->
-        <a href="login.html" class="botao-login">Login</a>
-        </form>
-         <!-- Menu lateral escondido -->
-    <nav class="menu-lateral" id="menuLateral">
-      <button class="fechar-menu" id="fecharMenu">✖</button>
-       <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sequencia.html">Sequência Star Wars</a></li>
-        <li><a href="personagens.html">Personagens</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
-    </header>
-  </div>
+      <!-- Input de texto, começa escondido -->
+      <input type="text" id="entradaPesquisa" placeholder="Digite sua pesquisa...">
+
+      <!-- Botão login -->
+    <a href="login.html" class="botao-login">Login</a>
+    </form>
+     <!-- Menu lateral escondido -->
+<nav class="menu-lateral" id="menuLateral">
+  <button class="fechar-menu" id="fecharMenu">✖</button>
+   <ul>
+    <li><a href="index.html">INICIO</a></li>
+    <li><a href="sequencia.html">SEQUÊNCIA STAR WARS</a></li>
+    <li><a href="personagens.html">PERSONAGENS</a></li>
+    <li><a href="#">SOBRE NÓS</a></li>
+  </ul>
+</nav>
+</header>
+<div>
+  <img src="./assets/img/dart.png" alt="" class="bgImagem">
+</div>
   <div class="titulo">
       <h1>Elenco Principal</h1>
     </div>
