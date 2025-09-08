@@ -11,20 +11,41 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body {
   margin: 0;
   font-family: "League Gothic", sans-serif, Arial, sans-serif;
   width: 100%;
-  background-image: url('../img/FUNDO.png');
+  height: 100%;
+  background-clip: url('../video/d2a1c3da3e78377f94fd2578fc92e6e2.mp4');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
   color: var(--cor-texto);
   position: relative;
-  background-color: var(--cor-fundo);
 }
+
+
+
+
+.video-background {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 
 
 .container2 {
@@ -36,7 +57,8 @@ body {
   color: #fff;
   box-sizing: border-box;
   border-radius: 8px;    /* opcional */
-  left: 170px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Barra de navegação */
@@ -200,9 +222,6 @@ body {
 
 .menu-lateral.ativo {
   left: -18px;
-
-  /* background-color: #000000;
-  color:#000000; */
 }
 
 /* Botão fechar menu */
@@ -241,6 +260,7 @@ body {
   letter-spacing: 0.05em;
   font-weight: 100;
   text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8);
 }
 .titulo2{
     display: flex;
@@ -259,7 +279,6 @@ body {
 }
 .titulo2 h2 {
   white-space: nowrap;
-  /* text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8); */
   /* align-items: center;
   justify-content: center; */
   padding-bottom: 10px;
@@ -268,7 +287,7 @@ body {
   font-size: 4vw;
   font-weight: 700;
   margin-bottom: 15px;
-
+  
   letter-spacing: 0.1em;
 }
 
@@ -283,7 +302,7 @@ body {
   padding: 0 20px;
   text-align: justify;
   margin-top: -45px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7);
 }
 
 /* Título seção 2 */
@@ -349,6 +368,8 @@ body {
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.07em;
+  
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8);
 }
 
 /* Botão quiz */
@@ -399,6 +420,8 @@ footer {
   font-size: 14px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   z-index: 10;
+  
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8);
 }
 
 /* Container do conteúdo para centralizar e limitar largura */
