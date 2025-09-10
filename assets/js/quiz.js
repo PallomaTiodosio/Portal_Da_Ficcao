@@ -18,6 +18,12 @@
         imagem: "assets/img/Pergunta3.jpg",
       },
       {
+        pergunta: "Qual era o nome original de Kylo Ren antes de se tornar aprendiz do Lado Sombrio?",
+        respostas: ["Anakin Solo", "Ben Solo", "Jacen Solo", "Ben Skywalker"],
+        correta: "Ben Solo",
+        imagem: "assets/img/pergunta7.png",
+      },  
+      {
         pergunta: "Qual personagem disse: 'Faça ou não faça. Tentativa não existe?'",
         respostas: ["Luke Skywalker", "Darth Vader", "Yoda", "Obi-Wan Kenobi"],
         correta: "Yoda",
@@ -28,6 +34,12 @@
         respostas: ["Luke Skywalker", "Darth Vader", "Leia Organa", "Han Solo"],
         correta: "Darth Vader",
         imagem: "assets/img/Pergunta5.jpg",
+      },
+      {
+        pergunta: "Qual foi o primeiro Jedi da história a resistir e sobreviver ao poder da Essência de Morte de Darth Nihilus?",
+        respostas: ["Meetra Surik", "Visas Marr", "Revan", "Bastila Shan"],
+        correta: "Visas Marr",
+        imagem: "assets/img/pergunta6.jpg",
       },
     ];
 
@@ -89,19 +101,27 @@
     }
 
     function selecionarResposta(resposta) {
-      const correta = quizData[perguntaAtual].correta;
-      if (resposta === correta) pontuacao++;
+  const correta = quizData[perguntaAtual].correta;
 
-      Array.from(respostasEl.children).forEach((btn) => {
-        btn.disabled = true;
-        if (btn.textContent === correta) {
-          btn.style.backgroundColor = "#ff0000";
-          btn.style.color = "#fff";
-        } else {
-          btn.style.backgroundColor = "#660000";
-          btn.style.color = "#fff";
-        }
-      });
+  Array.from(respostasEl.children).forEach((btn) => {
+    btn.disabled = true; // desativa todos os botões
+
+    if (btn.textContent === correta) {
+      // resposta correta
+      btn.style.backgroundColor = "#4CAF50"; // verde
+      btn.style.color = "#fff";
+    } else if (btn.textContent === resposta && resposta !== correta) {
+      // resposta que o usuário clicou e está errada
+      btn.style.backgroundColor = "#e60000"; // vermelho forte
+      btn.style.color = "#fff";
+      btn.textContent += " ❌"; // adiciona o X
+    } else {
+      // demais botões incorretos (não clicados)
+      btn.style.backgroundColor = "#b94242ff"; // vermelho pálido
+      btn.style.color = "#fff";
+    }
+  });
+
 
       botaoProxima.style.display = "block";
     }
@@ -130,16 +150,16 @@
 
       if (pontuacao === 5) {
         mensagemEl.textContent = `Incrível! Mestre Jedi ${nomeJogador}! 🌟 Clique em gerar certificado para salvar seu feito.`;
-        botaoGerarCertificado.style.display = "inline-block";
+        botaoGerarCertificado.style.display = "index.html";
       } else if (pontuacao >= 3 && pontuacao < 5) {
         mensagemEl.textContent = `Muito bom, ${nomeJogador}, mas precisou aprender mais!`;
-        linkAprender.style.display = "inline-block";
+        linkAprender.style.display = "index.html";
       } else if (pontuacao >= 2 && pontuacao < 3) {
         mensagemEl.textContent = `Que tal aumentar seus conhecimentos sobre Star Wars e o Mundo da Ficção?!${nomeJogador}`;
         linkAprender.style.display = "inline-block";
       } else {
         mensagemEl.textContent = `Que tal aprender mais sobre Star Wars?! ${nomeJogador}. É interessante!`;
-        linkAprender.style.display = "inline-block";
+        linkAprender.style.display = "index.html";
       }
     }
 

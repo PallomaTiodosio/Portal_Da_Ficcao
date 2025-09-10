@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <link rel="stylesheet" href="assets/css/login.css"> 
+    <title>Login - Star Wars</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="image-section">
+            <h2>Bem-vindo ao Império</h2>
+            <p>Acesse o sistema com suas credenciais para continuar sua missão.</p>
+        </div>
+
+        <div class="form-section">
+            <div class="logo">
+                <h1>Star Wars</h1>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Login</label>
+                    <input type="email" id="email" placeholder="Seu email" required />
+                    <div class="error-message" id="emailError">Por favor, insira um email válido</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Sua senha" required />
+                    <div class="error-message" id="passwordError">A senha é obrigatória</div>
+                    <div class="password-hint">Dica: use "starwars123" para acessar</div>
+                </div>
+
+                <button type="submit" class="btn-login">Acessar</button>
+            </form>
+
+            <div class="register-link">
+                Não tem cadastro? <a href="#">Cadastre-se aqui</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/login.js"></script> 
+</body>
+</html>
