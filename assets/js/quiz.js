@@ -100,26 +100,27 @@
       });
     }
 
-    function selecionarResposta(resposta) {
-  const correta = quizData[perguntaAtual].correta;
+  function selecionarResposta(resposta) {
+    const correta = quizData[perguntaAtual].correta;
+    resposta === correta ? pontuacao++ : ''
 
-  Array.from(respostasEl.children).forEach((btn) => {
-    btn.disabled = true; // desativa todos os botões
+    Array.from(respostasEl.children).forEach((btn) => {
+      btn.disabled = true; // desativa todos os botões
 
-    if (btn.textContent === correta) {
-      // resposta correta
-      btn.style.backgroundColor = "#4CAF50"; // verde
-      btn.style.color = "#fff";
-    } else if (btn.textContent === resposta && resposta !== correta) {
-      // resposta que o usuário clicou e está errada
-      btn.style.backgroundColor = "#e60000"; // vermelho forte
-      btn.style.color = "#fff";
-      btn.textContent += " ❌"; // adiciona o X
-    } else {
-      // demais botões incorretos (não clicados)
-      btn.style.backgroundColor = "#b94242ff"; // vermelho pálido
-      btn.style.color = "#fff";
-    }
+        if (btn.textContent === correta) {
+          // resposta correta
+          btn.style.backgroundColor = "#4CAF50"; // verde
+          btn.style.color = "#fff";
+        } else if (btn.textContent === resposta && resposta !== correta) {
+          // resposta que o usuário clicou e está errada
+          btn.style.backgroundColor = "#e60000"; // vermelho forte
+          btn.style.color = "#fff";
+          btn.textContent += " ❌"; // adiciona o X
+        } else {
+          // demais botões incorretos (não clicados)
+          btn.style.backgroundColor = "#b94242ff"; // vermelho pálido
+          btn.style.color = "#fff";
+        }
   });
 
 
@@ -138,7 +139,6 @@
     function mostrarResultado() {
       telaQuiz.style.display = "none";
       telaResultado.style.display = "flex";
-
       pontuacaoEl.textContent = `${nomeJogador}, você acertou ${pontuacao} de ${quizData.length} perguntas!`;
 
       // Reset visibilidades
@@ -148,21 +148,23 @@
       pontuacaoEl.style.display = "block";
       mensagemEl.style.display = "block";
 
-      if (pontuacao === 5) {
+      if (pontuacao === 7) {
         mensagemEl.textContent = `Incrível! Mestre Jedi ${nomeJogador}! 🌟 Clique em gerar certificado para salvar seu feito.`;
-        botaoGerarCertificado.style.display = "index.html";
-      } else if (pontuacao >= 3 && pontuacao < 5) {
+        botaoGerarCertificado.style.display = "";
+      } else if (pontuacao >= 3 && pontuacao <7) {
         mensagemEl.textContent = `Muito bom, ${nomeJogador}, mas precisou aprender mais!`;
         linkAprender.style.display = "index.html";
       } else if (pontuacao >= 2 && pontuacao < 3) {
         mensagemEl.textContent = `Que tal aumentar seus conhecimentos sobre Star Wars e o Mundo da Ficção?!${nomeJogador}`;
-        linkAprender.style.display = "inline-block";
+        linkAprender.style.display = "index.html";
       } else {
         mensagemEl.textContent = `Que tal aprender mais sobre Star Wars?! ${nomeJogador}. É interessante!`;
         linkAprender.style.display = "index.html";
       }
     }
 
+
+    
     botaoGerarCertificado.addEventListener("click", gerarCertificado);
 
     function gerarCertificado() {
