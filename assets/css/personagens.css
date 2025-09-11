@@ -26,6 +26,19 @@ body {
   background-color: var(--cor-fundo);
 }
 
+.Container {
+  position: relative;
+  background-color: #000; /* fundo preto */
+  width: 96%;            /* ajusta largura do fundo preto */
+  max-width: 100%;   /* máximo para não ficar gigante em telas grandes */
+  padding: 40px;
+  color: #fff;
+  box-sizing: border-box;
+  border-radius: 8px;    /* opcional */
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 
 
