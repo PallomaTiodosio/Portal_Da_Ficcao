@@ -153,13 +153,13 @@
         botaoGerarCertificado.style.display = "";
       } else if (pontuacao >= 3 && pontuacao <7) {
         mensagemEl.textContent = `Muito bom, ${nomeJogador}, mas precisou aprender mais!`;
-        linkAprender.style.display = "index.html";
+        linkAprender.style.display = "inline-block";
       } else if (pontuacao >= 2 && pontuacao < 3) {
         mensagemEl.textContent = `Que tal aumentar seus conhecimentos sobre Star Wars e o Mundo da Ficção?!${nomeJogador}`;
-        linkAprender.style.display = "index.html";
+        linkAprender.style.display = "inline-block";
       } else {
         mensagemEl.textContent = `Que tal aprender mais sobre Star Wars?! ${nomeJogador}. É interessante!`;
-        linkAprender.style.display = "index.html";
+        linkAprender.style.display = "inline-block";
       }
     }
 

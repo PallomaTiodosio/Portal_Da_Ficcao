@@ -58,51 +58,47 @@
 
 
   <div class="container">
-<div class="card"> 
-  <img src="./assets/img/Palloma.png" alt="Imagem 1"> 
-  <p>Palloma Tiodosio<br/>FullStack</p> </div> <div class="card"> 
-    <img src="./assets/img/Samuel.png" alt="Imagem 2"> 
-  <p>Samuel Barbosa <br/>FullStack</p> </div> <div class="card"> 
-    <img src="./assets/img/Luiza.png" alt="Imagem 3"> 
-    <p>Luiza Scolar <br/> FullStack</p> </div> <div class="card"> 
-      <img src="./assets/img/Lavinia.png" alt="Imagem 4"> 
-      <p>Lavinia Lis<br/>Designer e FrontEnd</p> </div>  
-  </div>
+    <div class="card"> 
+      <img src="./assets/img/Palloma.png" alt="Imagem 1"> 
+      <p>Palloma Tiodosio<br/>FullStack</p> </div> <div class="card"> 
+        <img src="./assets/img/Samuel.png" alt="Imagem 2"> 
+      <p>Samuel Barbosa <br/>FullStack</p> </div> <div class="card"> 
+        <img src="./assets/img/Luiza.png" alt="Imagem 3"> 
+        <p>Luiza Scolar <br/> FullStack</p> </div> <div class="card"> 
+          <img src="./assets/img/Lavinia.png" alt="Imagem 4"> 
+          <p>Lavinia Lis<br/>Designer e FrontEnd</p> </div>  
+      </div>
 
    <div class="titulo3">
       <h2>SOBRE NÓS</h2>
     </div>
 <div class="sobre">
-    <p>Nosso objetivo é informar e conectar fãs de ficção científica, com foco no universo Star Wars, oferecendo conteúdo de qualidade como análises, curiosidades e cronologias para enriquecer a experiência dos leitores.</p>
-</div>
-
-<div class="sobre2">
-    <p>Queremos levar você para o coração da galáxia Star Wars, com conteúdos que despertam a paixão pela ficção científica. Aqui é o lugar para quem vive e respira aventuras nas estrelas!</p>
+    <p>Nosso objetivo é informar e conectar fãs de ficção científica, com foco no universo Star Wars, oferecendo conteúdo de qualidade como análises, curiosidades e cronologias para enriquecer a experiência dos leitores.
+      Queremos levar você para o coração da galáxia Star Wars, com conteúdos que despertam a paixão pela ficção científica. Aqui é o lugar para quem vive e respira aventuras nas estrelas!    </p>
 </div>
 
 <div class="botao"> 
-        <a href="jogo.html" class="botao-jogo">JOGUE AQUI</a> 
+        <button class="botao-jogo" onclick="startGame()">JOGUE AQUI</button> 
       </div> 
+
+  <div class="game-area">
+  <div class="game-container">
+        <p id="pontos">Pontos: 0</p>
+        
+        <div id="desert">
+            <div class="grid">
+                <div class="dino"></div>
+            </div>
+            <h2 id="alert"></h2>
+   
+        </div>
+    </div>
+    
+   <button onclick="location.reload()" id="btn-reiniciar" class="btn-inactive">Reiniciar</button>
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
+</div>
 
 <footer> 
         <div class="footer-container"> 
@@ -128,6 +124,6 @@
   <a href="#">Ajuda</a>
   <a href="#">Parceria</a>
 </div>
-</div> </footer> <script src="assets/js/script.js"></script> 
+</div> </footer> <script src="./assets/js/sobre.js"></script> 
 </body> 
 </html>

@@ -4,6 +4,14 @@
   --cor-principal: #e50914; /* vermelho forte */
   --cor-secundaria: #222222;
   --cor-borda-card: #333333;
+    --game-width: 900px;
+    --game-height: 200px;
+    --dino-size: 90px;
+    --accent: #ffb300;
+    --bg: #f7f7f7;
+    --danger: #ff4500;
+    --btn-bg: #0077ff;
+    --btn-color: #fff;
 }
 
 /* Reset básico */
@@ -38,9 +46,6 @@ body {
   z-index: -1; /* envia pra trás do conteúdo */
 }
 
-
-
-
 .video-background {
   position: relative;
   height: 100%;
@@ -57,11 +62,6 @@ video {
   z-index: -1;
 }
 
-
-
-
-
-
 .video-background {
   position: relative;
   height: 100%;
@@ -77,8 +77,6 @@ video {
   object-fit: cover;
   z-index: -1;
 }
-
-
 
 .container2 {
   position: relative;
@@ -402,8 +400,10 @@ video {
   display: flex;
   padding: 20px;
   position: relative;
-  left: -300px;
+  left: -10px;
   top: 50px;
+  align-items: center;
+  justify-content: center;
 }
 
 .sobre2 {
@@ -420,12 +420,157 @@ video {
   left: 300px;
 }
 
+.game-area{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-container {
+    position: relative;
+    width: var(--game-width);
+    height: var(--game-height);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(44,44,44,0.18);
+    background: #fff;
+    border: 2px solid var(--primary);
+    display: none;
+}
+
+.game-started{
+  display: flex;
+}
+
+#pontos{
+    position: absolute;
+    top: 10px;
+    font-size: 22px;
+    color: var(--accent);
+    padding: 6px 18px;
+    border-radius: 12px;
+    z-index: 10;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#pontos {
+    right: 10px;
+}
+
+
+#alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: var(--danger);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.18);
+    z-index: 15;
+    font-weight: bold;
+}
+
+.dino {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: var(--dino-size);
+    height: var(--dino-size);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: filter 0.2s;
+
+}
+
+.obstacle {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    background-image: url(../img/obstaculo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 0px;
+
+}
+
+#desert {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fundo.jpg');
+    background-repeat: repeat-x;
+    animation: slideleft 100s infinite linear;
+    -webkit-animation: slideleft 100s infinite linear;
+    z-index: 1;
+}
+
+.desert-paused {
+    animation-play-state: paused !important;
+    -webkit-animation-play-state: paused !important;
+}
+
+.grid {
+    position: relative;
+    width: 900%;
+    height: 100%;
+    z-index: 2;
+}
+
+#btn-reiniciar {
+    width: 100px;
+    height: 60px;
+    background: var(--btn-bg);
+    border-radius: 30px;
+    color: var(--btn-color);
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    bottom: 24px;
+    right: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(44,44,44,0.12);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    margin: 20PX;
+}
+
+.btn-inactive{
+  display: none;
+}
+
+.btn-active{
+  display: block;
+}
+
+#btn-reiniciar:hover {
+    background: var(--accent);
+    color: var(--primary);
+    transform: scale(1.08);
+}
+
+/* Animação de movimento do chão */
+@keyframes slideleft {
+    from { background-position: 0% 0; }
+    to { background-position: 10000% 0; }
+}
+@-webkit-keyframes slideleft {
+    from { background-position: 0% 0; }
+    to { background-position: 10000% 0; }
+}
+
+
 /* BOTÃO */
 .botao {
   display: flex;
   justify-content: center;
-  margin: 60px 0;
+  margin: 90px 0;
   position: relative;
+  top: 10px;
 }
 
 .botao-jogo {
@@ -435,7 +580,7 @@ video {
   border-radius: 30px;
   text-decoration: none;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 1rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: background-color 0.3s ease;
@@ -471,7 +616,7 @@ footer {
   /* z-index: 10; */
 
   position: relative;
-  top: 1000px;
+  top: px;
   
   /* text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8); */
 }
